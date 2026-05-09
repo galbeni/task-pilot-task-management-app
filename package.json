@@ -1,0 +1,17 @@
+{
+  "name": "taskpilot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TaskPilot - Project & Task Management App",
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "dev:api": "pnpm --filter api start:dev",
+    "dev:web": "pnpm --filter web dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "test": "pnpm --filter api test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
