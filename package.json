@@ -4,9 +4,12 @@
   "private": true,
   "description": "TaskPilot - Project & Task Management App",
   "scripts": {
-    "dev": "pnpm -r --parallel dev",
+    "dev": "docker compose up -d && pnpm --parallel --filter api --filter web dev",
     "dev:api": "pnpm --filter api start:dev",
     "dev:web": "pnpm --filter web dev",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:logs": "docker logs -f taskpilot-postgres",
     "build": "pnpm -r build",
     "lint": "pnpm -r lint",
     "test": "pnpm --filter api test"
